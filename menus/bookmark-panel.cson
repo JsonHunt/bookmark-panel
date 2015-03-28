@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle bookmark-panel'
+      'command': 'bookmark-panel:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'bookmark-panel'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'bookmark-panel:toggle'
+        }
+      ]
+    ]
+  }
+]
