@@ -8,10 +8,15 @@ bookmarks: [
 		filename: '.coffee'
 		regexp: ///\s*(.*?):\s*(\(.*?\))?\s*->///
 		labelfx: (match)->
-			return ": #{match[1]}"
+			return "#{match[1]}"
+	},{
+		filename: '.js'
+		regexp: ///var (.*?)\s*=\s*function\s*\(.*?\)///
+		labelfx: (match)->
+			return "#{match[1]}"
 	},{
 		group: "TODO"
-		regexp: ///TO-?DO: (.*)///
+		regexp: ///TO-?DO: (.*)///i
 		labelfx: (match)->
 			return "#{match[1]}"
 	}
